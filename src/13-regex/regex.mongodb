@@ -1,0 +1,25 @@
+use("store")
+
+db.inventory.find({"item.description": { $regex: /line/ } })
+
+use("store")
+db.inventory.find({"item.description": { $regex: /LINE/i } })
+
+
+use("store")
+db.inventory.find({"item.description": { $regex: /line$/i } })
+
+
+use("store")
+db.inventory.find({"item.description": { $regex: /^single/i } })
+
+
+use("store")
+db.inventory.find({"item.description": { $regex: /^single/i } })
+
+use("store")
+//\n --> m = multiline
+db.inventory.find({"item.description": { $regex: /^s/im } })
+
+
+

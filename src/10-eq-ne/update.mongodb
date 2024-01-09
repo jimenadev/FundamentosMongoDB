@@ -1,0 +1,10 @@
+//Using $ne
+use("store")
+db.inventory.updateMany(
+    { qty: { $ne: 20 } },
+    {
+        $inc:{
+            qty: 10
+        }
+    }
+)

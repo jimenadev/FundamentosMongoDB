@@ -1,0 +1,39 @@
+use("store")
+
+// Using $gt (>) & $gte (>=)
+
+db.inventory.find({qty:{$gt:20}})
+
+use("store")
+db.inventory.find({qty:{$gte:20}})
+
+
+use("store")
+
+// Using $lt (<) & $lte (<=)
+db.inventory.find({qty:{$lt:20}})
+
+
+use("store")
+db.inventory.find({qty:{$lte:20}})
+
+use("store")
+//join
+db.inventory.find({qty:{$gte:25, $lte:35}})
+
+use("store")
+db.inventory.find({
+    "item.code":"123",
+    qty:{$gte:20, $lte:25}
+})
+
+use("store")
+db.inventory.find({
+    "item.code":{ $ne: "123"},
+    qty:{$gte:20, $lte:25}
+})
+
+
+
+
+

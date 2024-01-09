@@ -1,0 +1,20 @@
+use("store")
+
+//Using $eq
+db.inventory.find({ qty: 20 })
+
+use("store")
+db.inventory.find({ qty: {$eq:20 }  })
+
+use("store")
+db.inventory.find({ "item.name": "ab" })
+
+use("store")
+db.inventory.find({ "item.name": { $eq:"ab"} })
+
+
+//Using $ne
+use("store")
+db.inventory.find({ qty: { $ne: 20 } })
+
+
